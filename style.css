@@ -19,6 +19,10 @@ body > div {
   padding: 2rem;
 }
 
+img {
+  width: 2rem;
+}
+
 .sidebar {
   background-color: #1992d4;
   color: white;
