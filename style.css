@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
 body {
   font-family: "Inter";
   min-height: 100vh;
@@ -22,7 +27,7 @@ body > div {
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   grid-template-rows: repeat(2, 1fr);
 }
 
