@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Inter";
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+body > div {
+  padding: 2rem;
+}
+
+.sidebar {
+  background-color: #1992d4;
+  color: white;
+  grid-row: 1 / 3;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.main {
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 2rem;
+}
+
+.projects {
+  grid-row: 1 / 3;
+}
+
+.project-card,
+.announce-cards,
+.trending-cards {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.profile-name,
+.welcome-msg,
+.buttons,
+.title {
+  font-weight: 700;
+}
