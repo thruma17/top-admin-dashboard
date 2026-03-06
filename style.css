@@ -1,10 +1,70 @@
-* {
+*/* Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*:not(dialog) {
   margin: 0;
 }
 
+/* Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Add accessible line-height */
+body {
+  line-height: 1.5;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
 @font-face {
-  font-family: "Inter";
-  src: url("fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-family: "Noto Sans";
+  src: url("fonts/NotoSans-VariableFont_wdth\,wght.ttf") format("truetype");
 }
 
 label {
@@ -22,7 +82,7 @@ ul {
 }
 
 body {
-  font-family: "Inter";
+  font-family: "Noto Sans";
   display: grid;
   grid-template-columns: 20rem 1fr;
   grid-template-rows: auto 1fr;
