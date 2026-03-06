@@ -7,6 +7,10 @@
   src: url("fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
 
+label {
+  visibility: hidden;
+}
+
 p,
 li {
   font-size: 1.5rem;
@@ -20,8 +24,8 @@ ul {
 body {
   font-family: "Inter";
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 body > div {
@@ -30,6 +34,19 @@ body > div {
 
 img {
   width: 2rem; /* !!!MODIFY!!! */
+}
+
+.profile-pic,
+.welcome-pic {
+  border-radius: 100%;
+}
+
+.profile-pic {
+  width: 3rem;
+}
+
+.welcome-pic {
+  width: 5rem;
 }
 
 li > img {
@@ -43,6 +60,7 @@ li > img {
   display: grid;
   grid-template-rows: repeat(3, auto) 1fr;
   gap: 4rem;
+  z-index: 2;
 }
 
 .sidebar-logo {
@@ -50,6 +68,9 @@ li > img {
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: center;
+}
+
+.sidebar-logo h2 {
   font-size: 2rem;
 }
 
@@ -69,13 +90,66 @@ li > img {
   gap: 1rem;
   grid-template-columns: auto 1fr;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  box-shadow: 0px 0px 20px 0px hsl(0 0% 75% / 1);
+  z-index: 1;
+}
+
+.header > div {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .search {
+  grid-template-columns: 50px 0 1fr;
+  gap: 0.5rem;
+}
+
+input {
+  border-radius: 2rem;
+  border: 0;
+  background-color: #e2e8f0;
+  height: 2.5rem;
+}
+
+.profile-nav {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: end;
+  padding: 0 3rem;
+}
+
+.welcome {
+  justify-content: start;
+}
+
+.welcome-name {
+  font-size: 2rem;
+}
+
+.buttons {
+  padding: 0 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons button {
+  background-color: #1992d4;
+  color: white;
+  font-size: 1.25rem;
+  height: fit-content;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
 }
 
 .main {
@@ -83,6 +157,12 @@ li > img {
   display: grid;
   grid-template-columns: 5fr 2fr;
   gap: 2rem;
+}
+
+.main > div {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
 }
 
 .projects {
@@ -99,13 +179,12 @@ li > img {
 .projects-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .profile-name,
-.welcome-msg,
-.buttons,
+.welcome,
+button,
 .title,
 li {
   font-weight: 700;
