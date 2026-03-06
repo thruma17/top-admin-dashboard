@@ -7,6 +7,10 @@
   src: url("fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: "Inter";
   min-height: 100vh;
